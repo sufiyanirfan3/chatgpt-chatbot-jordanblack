@@ -1,8 +1,8 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+
 import chatLogo from "./assets/chat.jpeg";
 import userLogo from "./assets/user.png";
-import recipeGif from "./assets/gif.gif";
+
 import "./App.css";
 import { useRef } from "react";
 import axios from "axios";
@@ -34,7 +34,7 @@ function App() {
     // console.log({question})
     setLoading(true);
     axios
-      .post("http://localhost:3000/chat", {
+      .post("https://chatbot-server-jordanblack.onrender.com/chat", {
         question,
       })
       .then((response) => {
